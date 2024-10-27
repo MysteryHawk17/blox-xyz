@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "c18e542b-9732-4a49-89f8-bd3744fdf766",
+		"name": "Banking Transaction API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26537237"
+	},
+	"item": [
+		{
+			"name": "Transfer Funds",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fromAccount\": \"A001\",\n    \"toAccount\": \"A002\",\n    \"amount\": 200\n}"
+				},
+				"url": "http://localhost:3000/api/transactions/transfer"
+			},
+			"response": []
+		},
+		{
+			"name": "Check Account Balance A001",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/transactions/balance/A001"
+			},
+			"response": []
+		},
+		{
+			"name": "Check Account Balance A002",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/transactions/balance/A002"
+			},
+			"response": []
+		}
+	]
+}
